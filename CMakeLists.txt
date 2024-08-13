@@ -48,10 +48,24 @@ target_link_libraries(example_walk ${EXTRA_LIBS})
 add_executable(example_joystick example/example_joystick.cpp)
 target_link_libraries(example_joystick ${EXTRA_LIBS})
 
+add_executable(foward example/foward.cpp)
+target_link_libraries(foward ${EXTRA_LIBS})
+
+add_executable(left example/left.cpp)
+target_link_libraries(left ${EXTRA_LIBS})
+
+add_executable(right example/right.cpp)
+target_link_libraries(right ${EXTRA_LIBS})
+
+add_executable(left30 example/left30.cpp)
+target_link_libraries(left30 ${EXTRA_LIBS})
+
+add_executable(right30 example/right30.cpp)
+target_link_libraries(right30 ${EXTRA_LIBS})
 
 # install
 install(TARGETS
-  example_position example_velocity example_torque example_walk example_joystick
+  example_position example_velocity example_torque example_walk example_joystick foward left right left30 right30
   DESTINATION bin/unitree)
 install(DIRECTORY lib/cpp/${ARCH}/
   DESTINATION lib/unitree
